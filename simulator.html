@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bellman-Ford Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="simulator.html">Simulator</a></li> 
+      <li><a href="userguide.html">User Guide</a></li>
+    </ul>
+  </nav>
+
+  <h1>Bellman-Ford Algorithm Simulation</h1>
+
+  <div class="controls">
+    <input type="number" id="src" placeholder="Vertex 1" min="0">
+    <input type="number" id="dest" placeholder="Vertex 2" min="0">
+    <input type="number" id="weight" placeholder="Edge Weight">
+    <button onclick="addEdge()">Add Edge</button>
+    <button onclick="resetGraph()">Reset</button>
+  </div>
+
+  <div class="controls">
+    <input type="number" id="sourceVertex" placeholder="Source Vertex">
+    <button onclick="runBellmanFord()">Run</button>
+  </div>
+
+  <div class="graph-log-wrapper">
+    <div class="graph-container">
+      <canvas id="graphCanvas" width="600" height="450"></canvas>
+    </div>
+  
+    <div class="log-container">
+      <h3>Algorithm Log (Path Length vs Vertex)</h3>
+      <table id="algorithmLog" class="log-box"></table>
+    </div>
+  </div>
+  
+  <h3>Shortest Distances from Source</h3>
+  <table id="distanceTable"></table>
+  <br><br>
+
+  <script src="script.js"></script>
+
+  <footer>
+    <p class="credits">CREDITS: Mehek Abhyankar,Manasi Patil & Vaishnavi Paliwal</p>
+</footer>
+</body>
+</html>
