@@ -43,7 +43,7 @@ async function runBellmanFord()
     let log = "<tr><th>Step</th><th>Edge (u → v)</th><th>Distances</th></tr>";
     let k = 1;
 
-    for (let i = 0; i < V - 1; i++) S
+    for (let i = 0; i < V - 1; i++) 
     {
         for (let { src: u, dest: v, weight: w } of graph) 
         {
@@ -56,7 +56,7 @@ async function runBellmanFord()
             await new Promise(res => setTimeout(res, 500));
 
             let snap = dist.map(d => (d === Infinity ? "∞" : d)).join(", ");
-            log += `<tr><td>${k++}</td><td>${u} → ${v}</td><td>${snap}</td></tr>`;
+            log += '<tr><td>${k++}</td><td>${u} → ${v}</td><td>${snap}</td></tr>';
             document.getElementById("algorithmLog").innerHTML = log;
         }
     }
